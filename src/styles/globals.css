@@ -1,42 +1,50 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/BricolageGrotesque-VariableFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.gradient-effect {
+  background: radial-gradient(
+    circle at 0% 0%,
+    #b6cdf2 0%,
+    #e1ecf4 14.3%,
+    #fba141 28.6%,
+    #f76c56 42.9%,
+    #fa0b41 57.1%,
+    #e02173 71.4%,
+    #733b7f 85.7%,
+    #15416c 100%
+  );
+  background-size: 200% 200%;
+  animation: moveGradient 16s linear infinite alternate;
+}
+
+.gradient-effect-two {
+  background-image: linear-gradient(to bottom, #ffffff, transparent);
+}
+
+.font-bg {
+  font-family: "Bricolage Grotesque" !important;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
   }
 }
