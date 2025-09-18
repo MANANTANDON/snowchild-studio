@@ -175,7 +175,7 @@ export const ProjectTopCont = () => {
           {isMobile ? "OOG" : "Overseas Oil & Gas"}
         </Typography>
         <Image
-          src={"/images/project_img.svg"}
+          src={"/images/project_img.png"}
           width={783}
           height={343}
           layout="intrinsic"
