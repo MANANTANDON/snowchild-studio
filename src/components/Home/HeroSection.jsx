@@ -1,9 +1,9 @@
 import { Container } from "@mui/material";
 import React from "react";
-import { HeroEdges } from "./HeroEdges";
-import { HeroContent } from "./HeroContent";
-import { HeroBackground } from "./HeroBackground";
-import { HeroGradient } from "./HeroGradient";
+import { HeroEdges } from "./Hero/HeroEdges";
+import { HeroContent } from "./Hero/HeroContent";
+import { HeroBackground } from "./Hero/HeroBackground";
+import { HeroGradient } from "./Hero/HeroGradient";
 
 export const HeroSection = () => {
   return (
