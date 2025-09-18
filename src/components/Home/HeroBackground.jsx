@@ -11,7 +11,7 @@ export const HeroBackground = () => {
         <Grid
           size={{ xs: 1.5, md: 1 }}
           sx={{
-            height: { xs: "50px", sm: "90px" },
+            height: { xs: "42px", sm: "90px" },
             border: "1px solid #EBEBEB",
           }}
         />

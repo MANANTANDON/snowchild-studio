@@ -13,7 +13,7 @@ export const HeroContent = () => {
     px: { xs: 2, sm: 5 },
     py: 1,
     borderRadius: "30px",
-    fontSize: { xs: "14px", sm: "20px" },
+    fontSize: { xs: "12px", sm: "20px" },
     fontWeight: 500,
     transition: "all 0.3s ease",
     "&:hover": {
@@ -72,7 +72,7 @@ export const HeroContent = () => {
       {/* Hero Typography */}
       <Typography
         sx={{
-          fontSize: { xs: "32px", sm: "48px", md: "48px", lg: "56px" },
+          fontSize: { xs: "30px", sm: "48px", md: "48px", lg: "56px" },
           mt: { xs: 3, sm: 5 },
           lineHeight: 1.1,
         }}
@@ -95,7 +95,7 @@ export const HeroContent = () => {
       </Typography>
       <Typography
         sx={{
-          fontSize: { xs: "16px", sm: "26px", md: "26px" },
+          fontSize: { xs: "15px", sm: "26px", md: "26px" },
           color: "#444444",
           my: 3,
         }}

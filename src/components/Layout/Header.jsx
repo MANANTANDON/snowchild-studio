@@ -35,6 +35,7 @@ export const Header = () => {
         alignItems: "center",
         justifyContent: "space-between",
         px: { xs: 0, sm: 4 },
+        mx: { xs: -1.5, sm: 0 },
         borderBottom: showBorder ? "1px solid #EDEDED" : "none",
         transition: "border-bottom 0.3s ease",
         bgcolor: "#fafafa",
