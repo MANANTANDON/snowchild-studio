@@ -5,7 +5,7 @@ import { Header } from "./Header";
 export const Layout = ({ children }) => {
   return (
     <>
-      <Box sx={{ m: { xs: 0, sm: -1 } }}>
+      <Box sx={{ m: { xs: 2, sm: -1 } }}>
         <Header />
         {children}
       </Box>

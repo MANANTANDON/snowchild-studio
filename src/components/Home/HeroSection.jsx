@@ -13,7 +13,6 @@ export const HeroSection = () => {
         sx={{
           position: "relative",
           overflow: "hidden",
-          mt: { xs: 2, md: 0 },
         }}
       >
         <HeroEdges />
