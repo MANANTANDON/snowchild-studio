@@ -12,7 +12,7 @@ export const HeroBackground = () => {
         <Grid
           size={{ xs: 1.5, md: 1 }}
           sx={{
-            height: { xs: "50px", sm: "90px" },
+            height: { xs: "45px", sm: "90px" },
             border: "1px solid #EBEBEB",
           }}
         />
@@ -26,7 +26,7 @@ export const HeroBackground = () => {
         <Grid
           size={{ xs: 1.5, md: 1 }}
           sx={{
-            height: { xs: "50px", sm: "90px" },
+            height: { xs: "45px", sm: "90px" },
             border: {
               xs: "none",
               md: (key === 0 || key === 11) && "1px solid #EBEBEB",
@@ -44,8 +44,11 @@ export const HeroBackground = () => {
             <Grid
               size={{ xs: 1.5, sm: 1.5, md: 1 }}
               sx={{
-                height: { xs: "50px", sm: "90px" },
-                border: { xs: "none", md: "1px solid #EBEBEB" },
+                height: { xs: "45px", sm: "90px" },
+                border: {
+                  xs: "none",
+                  md: "1px solid #EBEBEB",
+                },
               }}
             />
           ))}
@@ -53,6 +56,8 @@ export const HeroBackground = () => {
           {SkippedGrids}
           {SkippedGrids}
           {SkippedGrids}
+          {isMobile && SkippedGrids}
+          {isMobile && SkippedGrids}
 
           {AllGrids}
           {AllGrids}
