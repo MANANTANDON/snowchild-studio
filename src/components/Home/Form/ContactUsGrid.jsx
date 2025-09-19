@@ -5,7 +5,6 @@ import React from "react";
 export const ContactUsGrid = () => {
   const isLaptop = useMediaQuery("(max-width:768px)");
   const isMobile = useMediaQuery("(max-width: 500px)");
-  const isMediumMobile = useMediaQuery("(max-width: 375px)");
   const gridCount = isLaptop ? 8 : 12;
 
   const AllGrids = (
@@ -53,7 +52,7 @@ export const ContactUsGrid = () => {
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 fontSize: {
-                  xs: isMediumMobile ? "24px" : "28px",
+                  xs: "26px",
                   sm: "50px",
                   md: "60px",
                 },
