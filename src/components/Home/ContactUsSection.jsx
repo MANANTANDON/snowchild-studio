@@ -25,6 +25,16 @@ export const ContactUsSection = () => {
         </Box>
         <ContactUsGrid />
         <ContactusForm />
+        <Box
+          sx={{
+            color: "transparent",
+            pointerEvents: "none",
+            mx: -3,
+            borderTop: "1px solid #EBEBEB",
+          }}
+        >
+          4d616e616e
+        </Box>
       </Container>
     </>
   );

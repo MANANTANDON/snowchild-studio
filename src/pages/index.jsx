@@ -4,6 +4,7 @@ import { Layout } from "@/components/Layout/Layout";
 import { HeroSection } from "@/components/Home/HeroSection";
 import { ProjectsSection } from "@/components/Home/ProjectsSection";
 import { ContactUsSection } from "@/components/Home/ContactUsSection";
+import { ShadowSection } from "@/components/Home/ShadowSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <ProjectsSection />
         <ContactUsSection />
+        <ShadowSection />
       </Layout>
     </>
   );
