@@ -3,6 +3,7 @@ import React from "react";
 import { Layout } from "@/components/Layout/Layout";
 import { HeroSection } from "@/components/Home/HeroSection";
 import { ProjectsSection } from "@/components/Home/ProjectsSection";
+import { ContactUsSection } from "@/components/Home/ContactUsSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Layout>
         <HeroSection />
         <ProjectsSection />
+        <ContactUsSection />
       </Layout>
     </>
   );

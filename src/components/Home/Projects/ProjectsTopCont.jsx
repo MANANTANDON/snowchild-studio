@@ -1,4 +1,5 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { ArrowOutwardRounded } from "@mui/icons-material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -180,6 +181,31 @@ export const ProjectTopCont = () => {
           height={343}
           layout="intrinsic"
         />
+        <Button
+          className="font-bg"
+          endIcon={<ArrowOutwardRounded />}
+          sx={{
+            textTransform: "none",
+            zIndex: 100,
+            px: { xs: 2, sm: 5 },
+            py: 1,
+            borderRadius: "30px",
+            fontSize: { xs: "14px", sm: "20px" },
+            fontWeight: 500,
+            transition: "all 0.3s ease",
+            bgcolor: "#171717",
+            color: "#FFFFFF",
+            border: "1px solid #171717",
+            mt: 5,
+            "&:hover": {
+              transform: "translateY(-2px)",
+              boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+              bgcolor: "#2a2a2a",
+            },
+          }}
+        >
+          View All Projects
+        </Button>
       </Box>
     </>
   );
