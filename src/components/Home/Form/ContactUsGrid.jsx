@@ -39,7 +39,7 @@ export const ContactUsGrid = () => {
           >
             <Box sx={{ position: "relative" }}>
               <Image
-                src={"/images/contactus.png"}
+                src={"/images/contactus1.png"}
                 layout="intrinsic"
                 height={143}
                 width={450}
