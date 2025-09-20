@@ -47,8 +47,8 @@ export const Footer = () => {
               style={{ borderRadius: "12px" }}
             />
             <Typography
-              className="font-bg"
-              sx={{ fontSize: { xs: "28px", md: "60px" }, fontWeight: 600 }}
+              className="sf-pro-display-bold"
+              sx={{ fontSize: { xs: "28px", md: "60px" } }}
             >
               Snowchild Studio
             </Typography>
@@ -73,7 +73,7 @@ export const Footer = () => {
           }}
         >
           <Typography
-            className="font-bg"
+            className="sf-pro-display-regular"
             component={"a"}
             href="/"
             sx={{ color: "#666666", fontSize: "14px" }}
@@ -82,7 +82,7 @@ export const Footer = () => {
           </Typography>
 
           <Typography
-            className="font-bg"
+            className="sf-pro-display-regular"
             component={"a"}
             href="/"
             sx={{ color: "#666666", fontSize: "14px", ml: 0.5 }}

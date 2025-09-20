@@ -51,8 +51,8 @@ export const Header = () => {
           style={{ borderRadius: "5px" }}
         />
         <Typography
-          className="font-bg"
-          sx={{ fontWeight: 500, fontSize: { xs: "20px", md: "26px" } }}
+          className="sf-pro-display-semibold"
+          sx={{ fontSize: { xs: "20px", md: "26px" } }}
         >
           Snowchild Studio
         </Typography>
@@ -66,7 +66,7 @@ export const Header = () => {
       >
         {["Projects", "About us"].map((item, key) => (
           <Typography
-            className="font-bg"
+            className="sf-pro-display-regular"
             key={key}
             sx={{ fontSize: "14px", fontWeight: 400, color: "#666666" }}
             component={"a"}
@@ -76,6 +76,7 @@ export const Header = () => {
           </Typography>
         ))}
         <Button
+          className="sf-pro-display-regular"
           sx={{
             fontSize: "14px",
             fontWeight: 400,

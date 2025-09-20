@@ -5,7 +5,7 @@ export const ContactusDetails = () => {
   return (
     <>
       <Typography
-        className="font-bg"
+        className="sf-pro-display-bold"
         sx={{ fontSize: "32px", fontWeight: 700 }}
       >
         Talk to Us.
@@ -14,13 +14,15 @@ export const ContactusDetails = () => {
         <Typography
           sx={{
             fontSize: { xs: "16px", md: "18px" },
-            fontWeight: 400,
             lineHeight: { xs: "20px", md: "22px" },
             color: "#666666",
           }}
-          className="font-bg"
+          className="sf-pro-display-regular"
         >
-          <span style={{ fontWeight: 600, color: "#171717" }}>
+          <span
+            style={{ color: "#171717" }}
+            className="sf-pro-display-semibold"
+          >
             Get a Custom Demo.
           </span>{" "}
           Discover the value of Snowchild Studio for your enterprise and explore
@@ -29,13 +31,15 @@ export const ContactusDetails = () => {
         <Typography
           sx={{
             fontSize: { xs: "16px", md: "18px" },
-            fontWeight: 400,
             lineHeight: { xs: "20px", md: "22px" },
             color: "#666666",
           }}
-          className="font-bg"
+          className="sf-pro-display-regular"
         >
-          <span style={{ fontWeight: 600, color: "#171717" }}>
+          <span
+            style={{ color: "#171717" }}
+            className="sf-pro-display-semibold"
+          >
             Book a Call.
           </span>{" "}
           See for yourself how Snowchild Studio enhances your design

@@ -76,7 +76,7 @@ export const HeroContent = () => {
           mt: { xs: 3, sm: 5 },
           lineHeight: 1.1,
         }}
-        className="font-bg"
+        className="sf-subheading"
         component="div"
         textAlign="center"
       >
@@ -99,7 +99,7 @@ export const HeroContent = () => {
           color: "#444444",
           my: 4,
         }}
-        className="font-bg"
+        className="sf-body"
       >
         We build 👨🏻‍💻 the web your way...
       </Typography>
@@ -119,7 +119,7 @@ export const HeroContent = () => {
         {buttons.map((button, index) => (
           <Button
             key={index}
-            className="font-bg"
+            className="sf-pro-display-bold"
             sx={button.sx}
             endIcon={button.icon}
           >

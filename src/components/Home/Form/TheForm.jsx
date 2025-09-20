@@ -270,7 +270,7 @@ export const TheForm = () => {
               color: "#FFFFFF",
               borderRadius: "30px",
             }}
-            className="font-bg"
+            className="sf-pro-display-semibold"
           >
             Talk to Us
           </Button>

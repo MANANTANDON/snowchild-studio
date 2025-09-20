@@ -18,10 +18,9 @@ export const ProjectTopCont = () => {
       >
         <Box sx={{ pb: 4 }}>
           <Typography
-            className="font-bg"
+            className="sf-pro-display-bold"
             sx={{
               fontSize: { xs: "30px", sm: "42px", md: "52px" },
-              fontWeight: 700,
               textAlign: "center",
               background: "linear-gradient(135deg,  #171717 0%, #15416C 80%)",
               backgroundClip: "text",
@@ -38,7 +37,7 @@ export const ProjectTopCont = () => {
               textAlign: "center",
               color: "#666666",
             }}
-            className="font-bg"
+            className="sf-pro-display-light"
           >
             <i>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -182,7 +181,7 @@ export const ProjectTopCont = () => {
           layout="intrinsic"
         />
         <Button
-          className="font-bg"
+          className="sf-pro-display-semibold"
           endIcon={<ArrowOutwardRounded />}
           sx={{
             textTransform: "none",

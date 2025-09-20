@@ -59,7 +59,7 @@ export const ContactUsGrid = () => {
                 whiteSpace: "nowrap",
                 fontWeight: "600",
               }}
-              className="font-bg"
+              className="sf-pro-display-bold"
             >
               Contact Us.
             </Typography>

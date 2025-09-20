@@ -10,7 +10,7 @@ export const CustomInputBase = ({
 }) => {
   return (
     <InputBase
-      className="font-bg"
+      className="sf-pro-display-regular"
       sx={{
         border: "1px solid #ebebeb",
         borderRadius: "5px",
