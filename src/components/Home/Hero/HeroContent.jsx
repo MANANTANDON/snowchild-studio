@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-export const HeroContent = () => {
+export const HeroContent = ({ scrollToForm }) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const router = useRouter();
 
@@ -29,7 +29,7 @@ export const HeroContent = () => {
       text: "Work with us",
       icon: <ArrowOutwardRounded />,
       variant: "primary",
-      onClick: () => {}, // Add your navigation logic here
+      onClick: () => scrollToForm(),
       sx: {
         ...baseButtonStyle,
         bgcolor: "#171717",

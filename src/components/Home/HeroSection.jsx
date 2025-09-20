@@ -5,7 +5,7 @@ import { HeroContent } from "./Hero/HeroContent";
 import { HeroBackground } from "./Hero/HeroBackground";
 import { HeroGradient } from "./Hero/HeroGradient";
 
-export const HeroSection = () => {
+export const HeroSection = ({ scrollToForm }) => {
   return (
     <>
       <Container
@@ -16,7 +16,7 @@ export const HeroSection = () => {
         }}
       >
         <HeroEdges />
-        <HeroContent />
+        <HeroContent scrollToForm={scrollToForm} />
         <HeroBackground />
         <HeroGradient />
       </Container>

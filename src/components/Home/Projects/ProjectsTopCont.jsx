@@ -52,7 +52,7 @@ export const ProjectTopCont = () => {
           sx={{
             position: "absolute",
             left: { xs: "20%", md: "30%" },
-            top: { xs: "53%", md: "42%" },
+            top: { xs: "43%", md: "42%" },
           }}
         >
           <svg fill="none" height="18" viewBox="0 0 17 18" width="17">
@@ -84,7 +84,7 @@ export const ProjectTopCont = () => {
             py: 0.3,
             position: "absolute",
             left: { xs: "13%", md: "21%" },
-            top: { xs: "57%", md: "45%" },
+            top: { xs: "47%", md: "45%" },
             fontSize: { xs: "9px", md: "12px" },
           }}
         >
@@ -95,7 +95,7 @@ export const ProjectTopCont = () => {
           sx={{
             position: "absolute",
             left: { xs: "18%" },
-            top: { xs: "86%", md: "71%" },
+            top: { xs: "73%", md: "71%" },
           }}
         >
           <svg fill="none" height="18" viewBox="0 0 17 18" width="17">
@@ -127,7 +127,7 @@ export const ProjectTopCont = () => {
             py: 0.3,
             position: "absolute",
             left: { xs: "5%", md: "13%" },
-            top: { xs: "90%", md: "74%" },
+            top: { xs: "77%", md: "74%" },
             fontSize: { xs: "9px", md: "12px" },
           }}
         >
@@ -138,7 +138,7 @@ export const ProjectTopCont = () => {
           sx={{
             position: "absolute",
             right: { xs: "15%", md: "17%" },
-            top: { xs: "87%", md: "71%" },
+            top: { xs: "73%", md: "71%" },
           }}
         >
           <svg fill="none" height="18" viewBox="0 0 17 18" width="17">
@@ -170,7 +170,7 @@ export const ProjectTopCont = () => {
             py: 0.3,
             position: "absolute",
             right: { xs: "6%", md: "7%" },
-            top: { xs: "91%", md: "74%" },
+            top: { xs: "76%", md: "74%" },
             fontSize: { xs: "9px", md: "12px" },
           }}
         >

@@ -3,11 +3,11 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export const Layout = ({ children }) => {
+export const Layout = ({ scrollToForm, children }) => {
   return (
     <>
       <Box sx={{ m: { xs: 1, md: -1 } }}>
-        <Header />
+        <Header scrollToForm={scrollToForm} />
         {children}
         <Footer />
       </Box>

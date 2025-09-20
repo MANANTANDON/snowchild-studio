@@ -22,18 +22,6 @@ export const ProjectsNotification = () => {
         mt: 1,
       }}
     >
-      <Box
-        sx={{
-          color: "#0060F2",
-          bgcolor: "#EAF4FF",
-          px: 1.5,
-          py: 0.5,
-          borderRadius: "20px",
-        }}
-        className="sf-pro-display-medium"
-      >
-        New
-      </Box>
       <Typography className="sf-pro-display-light" textAlign={"center"}>
         Join Snowchild Studio to enhance your web experience
       </Typography>

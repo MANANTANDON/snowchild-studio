@@ -53,8 +53,8 @@ export const ProjectsGrid = () => {
               <Image
                 src={"/images/projects1.png"}
                 layout="intrinsic"
-                height={143}
-                width={450}
+                height={127}
+                width={378}
               />
             </Box>
             <Typography
@@ -77,6 +77,7 @@ export const ProjectsGrid = () => {
               Projects.
             </Typography>
           </Box>
+          {isMobile && AllGrids}
           {isMobile && AllGrids}
         </Grid>
       </Box>
