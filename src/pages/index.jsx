@@ -10,14 +10,13 @@ export default function Home() {
   const formRef = useRef(null);
 
   const scrollToForm = () => {
-    // Method 1: Custom smooth scroll with duration control
     const element = formRef.current;
     if (element) {
       const elementPosition =
         element.getBoundingClientRect().top + window.pageYOffset;
       const startPosition = window.pageYOffset;
       const distance = elementPosition - startPosition;
-      const duration = 1000; // 1 second duration
+      const duration = 1000;
       let start = null;
 
       const step = (timestamp) => {
@@ -25,7 +24,6 @@ export default function Home() {
         const progress = timestamp - start;
         const progressPercentage = Math.min(progress / duration, 1);
 
-        // Easing function for smooth animation
         const ease =
           progressPercentage < 0.5
             ? 2 * progressPercentage * progressPercentage
@@ -41,6 +39,8 @@ export default function Home() {
       requestAnimationFrame(step);
     }
   };
+
+  console.log("4d616e616e");
   return (
     <>
       <Head>
