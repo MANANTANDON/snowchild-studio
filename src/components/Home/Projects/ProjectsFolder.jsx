@@ -80,13 +80,16 @@ export const ProjectsFolder = () => {
                   </a>
                   <Box sx={{ mx: 2 }}>
                     <Typography
+                      component={"a"}
+                      href={item?.link}
                       sx={{
-                        bgcolor: "#EBEBEB",
+                        bgcolor: "#FFFFFF",
                         border: "1px solid #D3D3D3",
                         width: "fit-content",
                         color: "#171717",
                         borderRadius: "5px",
                         px: "10px",
+                        py: 0.2,
                         mt: 1.5,
                       }}
                       className="sf-pro-display-semibold"
@@ -110,7 +113,10 @@ export const ProjectsFolder = () => {
                     </Typography>
                     <a href={item.link} target="_blank">
                       <IconButton
-                        sx={{ bgcolor: "#FFFFFF", border: "1px solid #ebebeb" }}
+                        sx={{
+                          bgcolor: "#EBEBEB80",
+                          border: "1px solid #D3D3D3",
+                        }}
                       >
                         <ArrowRightAltRounded />
                       </IconButton>

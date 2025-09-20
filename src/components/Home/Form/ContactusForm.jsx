@@ -15,6 +15,7 @@ export const ContactusForm = () => {
             size={{ xs: 12, md: 6 }}
             sx={{
               bgcolor: "#FFFFFF",
+              borderTop: { xs: "1px solid #ebebeb", md: "none" },
               borderLeft: "1px solid #ebebeb",
               p: "26px",
             }}
