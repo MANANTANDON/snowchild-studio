@@ -2,9 +2,11 @@ import { ArrowOutwardRounded } from "@mui/icons-material";
 import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/router";
 
 export const ProjectTopCont = () => {
   const isMobile = useMediaQuery("(max-width:500px)");
+  const router = useRouter();
   return (
     <>
       <Box
@@ -202,6 +204,7 @@ export const ProjectTopCont = () => {
               bgcolor: "#2a2a2a",
             },
           }}
+          onClick={() => router.push("/projects")}
         >
           View All Projects
         </Button>

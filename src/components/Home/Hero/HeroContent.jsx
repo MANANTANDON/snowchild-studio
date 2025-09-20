@@ -1,10 +1,12 @@
 import { ArrowOutwardRounded } from "@mui/icons-material";
 import { Box, Button, Typography, useMediaQuery } from "@mui/material";
+import { useRouter } from "next/router";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
 export const HeroContent = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const router = useRouter();
 
   // Reusable button styles
   const baseButtonStyle = {
@@ -27,6 +29,7 @@ export const HeroContent = () => {
       text: "Work with us",
       icon: <ArrowOutwardRounded />,
       variant: "primary",
+      onClick: () => {}, // Add your navigation logic here
       sx: {
         ...baseButtonStyle,
         bgcolor: "#171717",
@@ -41,6 +44,7 @@ export const HeroContent = () => {
     {
       text: "View Projects",
       variant: "secondary",
+      onClick: () => router.push("/projects"),
       sx: {
         ...baseButtonStyle,
         bgcolor: "#FFFFFF",
@@ -103,7 +107,6 @@ export const HeroContent = () => {
       >
         We build 👨🏻‍💻 the web your way...
       </Typography>
-
       {/* Action Buttons */}
       <Box
         sx={{
@@ -122,6 +125,7 @@ export const HeroContent = () => {
             className="sf-pro-display-bold"
             sx={button.sx}
             endIcon={button.icon}
+            onClick={button.onClick}
           >
             {button.text}
           </Button>

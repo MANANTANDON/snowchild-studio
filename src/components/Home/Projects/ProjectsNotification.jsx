@@ -34,7 +34,7 @@ export const ProjectsNotification = () => {
       >
         New
       </Box>
-      <Typography className="sf-pro-display-light">
+      <Typography className="sf-pro-display-light" textAlign={"center"}>
         Join Snowchild Studio to enhance your web experience
       </Typography>
       <Button

@@ -36,7 +36,7 @@ export const ProjectsFolder = () => {
   return (
     <>
       <ProjectsNotification />
-      <Container maxWidth="lg" sx={{ position: "relative" }}>
+      <Container maxWidth="lg" sx={{ position: "relative", mt: 5 }}>
         <ProjectsGrid />
       </Container>
       <Container
