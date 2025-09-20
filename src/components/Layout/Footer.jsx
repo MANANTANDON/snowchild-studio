@@ -22,7 +22,7 @@ export const Footer = () => {
           sx={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "baseline",
+            alignItems: { xs: "flex-start", md: "center" },
             flexDirection: {
               xs: "column",
               md: "row",
@@ -35,7 +35,7 @@ export const Footer = () => {
             href="/"
             sx={{
               display: "flex",
-              alignItems: { xs: "center", md: "baseline" },
+              alignItems: "center",
               gap: 2,
             }}
           >

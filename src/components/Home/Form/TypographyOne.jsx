@@ -4,7 +4,7 @@ export const Typographyone = ({ title, secondaryText }) => {
   return (
     <>
       <Typography
-        className="sf-pro-display-medium"
+        className="sf-pro-display-bold"
         sx={{ fontSize: { xs: "16px" } }}
       >
         {title}

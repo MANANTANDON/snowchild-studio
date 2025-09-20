@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import { Typographyone } from "./TypographyOne";
 import { CustomInputBase } from "./CustomInputBase";
 import axios from "axios";
+import { ArrowOutward } from "@mui/icons-material";
 
 export const TheForm = () => {
   const [formData, setFormData] = useState({
@@ -345,12 +346,14 @@ export const TheForm = () => {
             type="submit"
             fullWidth
             disabled={isSubmitting}
+            endIcon={<ArrowOutward />}
             sx={{
               textTransform: "none",
               fontSize: "16px",
               bgcolor: isSubmitting ? "#ccc" : "#006BFF",
               color: "#FFFFFF",
-              borderRadius: "30px",
+              borderRadius: "5px",
+              py: 1,
               position: "relative",
               "&:hover": {
                 bgcolor: isSubmitting ? "#ccc" : "#0056CC",
@@ -364,7 +367,7 @@ export const TheForm = () => {
                 Sending...
               </>
             ) : (
-              "Talk to Us"
+              "Talk to us "
             )}
           </Button>
         </Grid>
