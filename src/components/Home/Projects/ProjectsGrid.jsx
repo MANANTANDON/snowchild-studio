@@ -2,7 +2,7 @@ import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const ContactUsGrid = () => {
+export const ProjectsGrid = () => {
   const isLaptop = useMediaQuery("(max-width:768px)");
   const isMobile = useMediaQuery("(max-width: 500px)");
   const gridCount = isLaptop ? 8 : 12;
@@ -25,8 +25,20 @@ export const ContactUsGrid = () => {
 
   return (
     <>
-      <Box sx={{ mx: { xs: -3 }, border: "1px solid #EBEBEB" }}>
+      <Box sx={{ mx: { xs: -2, sm: -3 }, border: "1px solid #EBEBEB" }}>
         <Grid container sx={{ position: "relative" }}>
+          <Typography
+            sx={{
+              position: "absolute",
+              top: "10px",
+              left: "10px",
+              zIndex: 2,
+              color: "#666666",
+            }}
+            className="sf-pro-display-medium"
+          >
+            {">_ cd projects"}
+          </Typography>
           {AllGrids}
           {AllGrids}
           <Box
@@ -39,7 +51,7 @@ export const ContactUsGrid = () => {
           >
             <Box sx={{ position: "relative" }}>
               <Image
-                src={"/images/contactus1.png"}
+                src={"/images/projects1.png"}
                 layout="intrinsic"
                 height={143}
                 width={450}
@@ -50,6 +62,7 @@ export const ContactUsGrid = () => {
                 position: "absolute",
                 top: "50%",
                 left: "50%",
+                color: "#ebebeb",
                 transform: "translate(-50%, -50%)",
                 fontSize: {
                   xs: "26px",
@@ -61,7 +74,7 @@ export const ContactUsGrid = () => {
               }}
               className="sf-pro-display-bold"
             >
-              Contact Us.
+              Projects.
             </Typography>
           </Box>
           {isMobile && AllGrids}

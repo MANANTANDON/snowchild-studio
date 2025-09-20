@@ -3,6 +3,11 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
+const HEADERMENU = [
+  { name: "Projects", link: "/projects" },
+  { name: "About Us", link: "/" },
+];
+
 export const Header = () => {
   const [showBorder, setShowBorder] = useState(false);
 
@@ -41,7 +46,7 @@ export const Header = () => {
         bgcolor: "#fafafa",
       }}
     >
-      <Box sx={{ display: "flex", gap: 1 }}>
+      <Box sx={{ display: "flex", gap: 1 }} component={"a"} href="/">
         <Image
           src="/images/studiologo.png"
           height={32}
@@ -64,15 +69,15 @@ export const Header = () => {
           gap: 2,
         }}
       >
-        {["Projects", "About us"].map((item, key) => (
+        {HEADERMENU.map((item, key) => (
           <Typography
             className="sf-pro-display-regular"
             key={key}
             sx={{ fontSize: "14px", fontWeight: 400, color: "#666666" }}
             component={"a"}
-            href="/"
+            href={item.link}
           >
-            {item}
+            {item.name}
           </Typography>
         ))}
         <Button
