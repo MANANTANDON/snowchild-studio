@@ -1,7 +1,15 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+  Alert,
+  CircularProgress,
+} from "@mui/material";
 import React, { useState } from "react";
 import { Typographyone } from "./TypographyOne";
 import { CustomInputBase } from "./CustomInputBase";
+import axios from "axios";
 
 export const TheForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +22,9 @@ export const TheForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+  const [submitMessage, setSubmitMessage] = useState("");
 
   // Regex patterns
   const patterns = {
@@ -26,6 +37,12 @@ export const TheForm = () => {
   };
 
   const handleChange = (field, value) => {
+    // Clear submit status when user starts editing again
+    if (submitStatus) {
+      setSubmitStatus(null);
+      setSubmitMessage("");
+    }
+
     let newErrors = { ...errors };
 
     // Remove error when user starts typing
@@ -116,32 +133,80 @@ export const TheForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateForm()) {
-      console.log("Form submitted successfully:", formData);
-      // Here you can add your API call or form submission logic
-      alert("Form submitted successfully!");
+    // Clear previous status
+    setSubmitStatus(null);
+    setSubmitMessage("");
 
-      // Reset form
-      setFormData({
-        name: "",
-        companyName: "",
-        email: "",
-        phoneNumber: "",
-        website: "",
-        query: "",
-      });
-      setErrors({});
-    } else {
-      console.log("Form has errors:", errors);
+    if (validateForm()) {
+      setIsSubmitting(true);
+
+      try {
+        const res = await axios.post("/api/send-email", formData);
+
+        if (res.data.success) {
+          setSubmitStatus("success");
+          setSubmitMessage(
+            res.data.message || "Thank you! We'll get back to you soon."
+          );
+
+          // Reset form
+          setFormData({
+            name: "",
+            companyName: "",
+            email: "",
+            phoneNumber: "",
+            website: "",
+            query: "",
+          });
+          setErrors({});
+
+          // Auto-hide success message after 5 seconds
+          setTimeout(() => {
+            setSubmitStatus(null);
+            setSubmitMessage("");
+          }, 5000);
+        } else {
+          setSubmitStatus("error");
+          setSubmitMessage(
+            res.data.message || "Something went wrong. Please try again."
+          );
+        }
+      } catch (err) {
+        console.error("Error submitting form:", err);
+
+        // Handle different types of errors
+        if (err.response) {
+          // Server responded with error status
+          setSubmitStatus("error");
+          setSubmitMessage(
+            err.response.data?.message ||
+              `Server error (${err.response.status}). Please try again.`
+          );
+        } else if (err.request) {
+          // Network error
+          setSubmitStatus("error");
+          setSubmitMessage(
+            "Network error. Please check your connection and try again."
+          );
+        } else {
+          // Other error
+          setSubmitStatus("error");
+          setSubmitMessage("Failed to submit the form. Please try again.");
+        }
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <Grid container>
+        {/* Success/Error Message */}
+
         <Grid size={{ xs: 12, md: 6 }} sx={{ p: 1 }}>
           <Box>
             <Typographyone title="Name" />
@@ -149,6 +214,7 @@ export const TheForm = () => {
               placeholder="Manan Tandon"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
+              disabled={isSubmitting}
             />
             {errors.name && (
               <Typography sx={{ color: "red", fontSize: "12px", mt: 0.5 }}>
@@ -165,6 +231,7 @@ export const TheForm = () => {
               placeholder="Company Name"
               value={formData.companyName}
               onChange={(e) => handleChange("companyName", e.target.value)}
+              disabled={isSubmitting}
             />
             {errors.companyName && (
               <Typography sx={{ color: "red", fontSize: "12px", mt: 0.5 }}>
@@ -181,6 +248,7 @@ export const TheForm = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={(e) => handleChange("email", e.target.value)}
+              disabled={isSubmitting}
             />
             {errors.email && (
               <Typography sx={{ color: "red", fontSize: "12px", mt: 0.5 }}>
@@ -197,6 +265,7 @@ export const TheForm = () => {
               placeholder="Phone Number"
               value={formData.phoneNumber}
               onChange={(e) => handleChange("phoneNumber", e.target.value)}
+              disabled={isSubmitting}
             />
             {errors.phoneNumber && (
               <Typography sx={{ color: "red", fontSize: "12px", mt: 0.5 }}>
@@ -213,6 +282,7 @@ export const TheForm = () => {
               placeholder="http://address.com"
               value={formData.website}
               onChange={(e) => handleChange("website", e.target.value)}
+              disabled={isSubmitting}
             />
             {errors.website && (
               <Typography sx={{ color: "red", fontSize: "12px", mt: 0.5 }}>
@@ -232,6 +302,7 @@ export const TheForm = () => {
               maxLength={500}
               value={formData.query}
               onChange={(e) => handleChange("query", e.target.value)}
+              disabled={isSubmitting}
             />
             <Box
               sx={{
@@ -260,19 +331,41 @@ export const TheForm = () => {
         </Grid>
 
         <Grid size={12} sx={{ p: 1, mt: 2 }}>
+          {submitStatus && (
+            <Grid size={12} sx={{ p: 1, mb: 2 }}>
+              <Alert
+                severity={submitStatus === "success" ? "success" : "error"}
+                sx={{ borderRadius: "8px" }}
+              >
+                {submitMessage}
+              </Alert>
+            </Grid>
+          )}
           <Button
             type="submit"
             fullWidth
+            disabled={isSubmitting}
             sx={{
               textTransform: "none",
               fontSize: "16px",
-              bgcolor: "#006BFF",
+              bgcolor: isSubmitting ? "#ccc" : "#006BFF",
               color: "#FFFFFF",
               borderRadius: "30px",
+              position: "relative",
+              "&:hover": {
+                bgcolor: isSubmitting ? "#ccc" : "#0056CC",
+              },
             }}
             className="sf-pro-display-semibold"
           >
-            Talk to Us
+            {isSubmitting ? (
+              <>
+                <CircularProgress size={20} sx={{ mr: 1, color: "#fff" }} />
+                Sending...
+              </>
+            ) : (
+              "Talk to Us"
+            )}
           </Button>
         </Grid>
       </Grid>
