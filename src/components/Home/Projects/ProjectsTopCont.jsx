@@ -42,8 +42,8 @@ export const ProjectTopCont = () => {
             className="sf-pro-display-light"
           >
             <i>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Innovative digital platforms for media, technology, and enterprise
+              clients.
             </i>
           </Typography>
         </Box>
