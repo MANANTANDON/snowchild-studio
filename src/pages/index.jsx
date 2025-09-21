@@ -44,10 +44,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Snowchild Studio</title>
-        <meta name="description" content="Snowchild Studios" />
+        <title>Snowchild Studio - Creative Collective</title>
+        <meta
+          name="description"
+          content="Snowchild Studio Creative Collective builds innovative digital platforms and custom web solutions for media, technology, and enterprise clients. Transform your ideas into powerful digital experiences."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/studiologo.png" />
       </Head>
 
       <Layout scrollToForm={scrollToForm}>

@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 
 const HEADERMENU = [
   { name: "Projects", link: "/projects" },
-  { name: "About Us", link: "/aboutus" },
+  // { name: "About Us", link: "/aboutus" },
 ];
 
 export const Header = ({ scrollToForm }) => {
