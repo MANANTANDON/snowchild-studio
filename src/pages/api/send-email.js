@@ -76,7 +76,8 @@ export default async function handler(req, res) {
 
       return res.status(200).json({
         success: true,
-        message: "Email sent successfully!",
+        message:
+          "Email sent successfully! We will contact you within 24 hours.",
       });
     } catch (error) {
       console.error("Email error:", error);
