@@ -75,7 +75,7 @@ export const Footer = () => {
           <Typography
             className="sf-pro-display-regular"
             component={"a"}
-            href="/"
+            href="/terms-and-conditions"
             sx={{ color: "#666666", fontSize: "14px" }}
           >
             Terms & Condition •
